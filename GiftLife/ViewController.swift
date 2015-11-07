@@ -9,17 +9,38 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
 
+   
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var ScrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+       ScrollView.contentSize.height = 1000
+    
+        let tap = UITapGestureRecognizer(target: self, action: Selector("tappedMe"))
+        imageView.addGestureRecognizer(tap)
+        imageView.userInteractionEnabled = true
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func OpenUrl(sender: AnyObject) {
+        if sender.tag == 1 {
+            UIApplication.sharedApplication().openURL(NSURL(string:"http://www.cenatra.salud.gob.mx/")!)
+        } else {
+            UIApplication.sharedApplication().openURL(NSURL(string:"http://asociacionale.org/index.php/es/")!)
+        }
     }
-
-
+   
+    func tappedMe(){
+       self.navigationController!.pushViewController(self.storyboard!.instantiateViewControllerWithIdentifier("webViewSegue") as UIViewController, animated: true)
+    }
+    
+    
 }
 

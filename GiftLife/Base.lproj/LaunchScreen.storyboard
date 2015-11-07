@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,15 +14,123 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Footer" translatesAutoresizingMaskIntoConstraints="NO" id="bqK-N6-6ER">
+                                <rect key="frame" x="0.0" y="717" width="414" height="19"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="3Wr-bO-Ylb"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="19" id="HWi-mq-R4S"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="Kxe-E3-Qfk"/>
+                                    <constraint firstAttribute="height" constant="19" id="t5A-uy-aZJ"/>
+                                    <constraint firstAttribute="width" constant="414" id="ytq-Zv-Ifl"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3Wr-bO-Ylb"/>
+                                        <exclude reference="Kxe-E3-Qfk"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="3Wr-bO-Ylb"/>
+                                        <include reference="Kxe-E3-Qfk"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright © 2015 UTEZ. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Q8M-bJ-l0c">
+                                <rect key="frame" x="67" y="688" width="280" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ShareLife" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="B7B-i4-iNO">
+                                <rect key="frame" x="126" y="346" width="163" height="43"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShareLifeApp" translatesAutoresizingMaskIntoConstraints="NO" id="Xgb-J9-8kO">
+                                <rect key="frame" x="87" y="185" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bqK-N6-6ER" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="0I0-YG-m65"/>
+                            <constraint firstItem="bqK-N6-6ER" firstAttribute="top" secondItem="Q8M-bJ-l0c" secondAttribute="bottom" constant="8" id="1Lc-FK-bdb"/>
+                            <constraint firstItem="Xgb-J9-8kO" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="67" id="1QL-kq-Mx6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xgb-J9-8kO" secondAttribute="trailing" constant="67" id="L1B-aw-9F3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bqK-N6-6ER" secondAttribute="trailing" constant="-20" id="Of9-6Z-hbJ"/>
+                            <constraint firstItem="B7B-i4-iNO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="QGJ-GN-GNX"/>
+                            <constraint firstItem="B7B-i4-iNO" firstAttribute="top" secondItem="Xgb-J9-8kO" secondAttribute="bottom" constant="33" id="U5C-eC-4QM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q8M-bJ-l0c" secondAttribute="trailing" constant="47" id="dLk-l6-HwG"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="bqK-N6-6ER" secondAttribute="bottom" id="dR9-T5-MMb"/>
+                            <constraint firstItem="B7B-i4-iNO" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="vRg-lr-KSR"/>
+                            <constraint firstItem="Q8M-bJ-l0c" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="47" id="w5i-iD-uEG"/>
+                            <constraint firstItem="Xgb-J9-8kO" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="165" id="xlh-09-CNC"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Footer" translatesAutoresizingMaskIntoConstraints="NO" id="Dol-8d-SKZ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="19"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="414" id="0jR-wK-t8n"/>
+                        <constraint firstAttribute="height" constant="19" id="GgT-tc-jCs"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="19" id="Tt8-Qo-b5C"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="gvJ-Td-fAY"/>
+                        <constraint firstAttribute="height" constant="15" id="oLC-6k-XUH"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="gvJ-Td-fAY"/>
+                            <exclude reference="oLC-6k-XUH"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="gvJ-Td-fAY"/>
+                            <include reference="oLC-6k-XUH"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Footer" translatesAutoresizingMaskIntoConstraints="NO" id="Dtr-kd-jGJ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="19"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="DqR-lp-UBu"/>
+                        <constraint firstAttribute="width" constant="414" id="XQh-Ug-cts"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="YdQ-7c-gVk"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="19" id="aXo-dg-Svl"/>
+                        <constraint firstAttribute="height" constant="19" id="vnI-B8-cbg"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="DqR-lp-UBu"/>
+                            <exclude reference="YdQ-7c-gVk"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="DqR-lp-UBu"/>
+                            <include reference="YdQ-7c-gVk"/>
+                        </mask>
+                    </variation>
+                </imageView>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Footer" width="1024" height="15"/>
+        <image name="ShareLifeApp" width="946" height="946"/>
+    </resources>
 </document>
